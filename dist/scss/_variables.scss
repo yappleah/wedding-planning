@@ -1,0 +1,30 @@
+/* define standard variables */
+$primary-color: #fff;
+$accent-color: #e1a8b1;
+$complementary-color:#a8e1d8;
+$text-color: black;
+$footer-text-color: #444444;
+// $primary-background-color: lightgray;
+$footer-color:#f0d3d8;
+$font-weights: (
+    "thin":300,
+    "regular": 400,
+    "medium": 500,
+    "bold": 700
+);
+
+$font-size: (
+    "text": 1rem,
+    "menu": 1.1rem,
+    "mobile-menu": 0.8rem,
+);
+
+/*
+        iPhone 5S is an example of a Breakpoint 1 with 320px
+        iPhone 6+ is an example of a Breakpoint 2 with 414px
+        iPad Mini is an example of a Breakpoint 3 with 703px
+        iPad Air is an example of a Breakpoint 4 with 768px
+*/
+
+$mobile:575px;
+$tablet:768px;

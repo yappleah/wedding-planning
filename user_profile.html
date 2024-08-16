@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<!-- 
+name: ==Team 1== Maha Abbadi, Leah Teresa Yapp, Fei Li, Linlin Xie 
+Current Date: Feb 19 2024
+File name: Home page
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sweet Symphony Home</title>
+  <meta name="description=" content="Sweet Symphony is a team of wedding experts specializing in planning destination weddings at the world's most exclusive hotels and resorts.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css" >
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/index_en_fr.css" >
+  <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+  <script src="scripts/user_profile.js"></script>
+  <script defer src="scripts/permission.js"></script>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="images/favicon_io/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="images/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/favicon_io/android-chrome-192x192.png">
+  <link rel="icon" sizes="512x512" href="images/favicon_io/android-chrome-512x512.png">
+
+  <style>
+    table {
+        width: 100%;
+        margin: auto;
+    }
+
+    .container {
+        margin-bottom: 30px;
+    }
+
+    th {
+        font-size: 1.5rem;
+        color: #e1a8b1;
+    }
+
+    td {
+        border: 1px black solid;
+        padding: 5px 10px;
+    }
+
+    tr td:first-child, .header {
+        font-weight: bold;
+        text-align: left;
+    }
+
+    input {
+        border: none;
+        background-color: white;
+    }
+   
+    input[type="button"] {
+        font-size: 0.9rem;
+        margin-left: 20px;
+        border: none;
+        color: #e1a8b1;
+        background-color: white;
+    }
+
+    .btn {
+      background-color: #e1a8b1;
+      border-color: #e1a8b1;
+    }
+
+    .btn:hover {
+      background-color: #a8e1d8;
+      border-color: #a8e1d8;
+    }
+
+    input[type="button"]:hover {
+        color: #a8e1d8;
+    }
+
+    #countdown td {
+        padding: 1px;
+    }
+
+    #countdown td:first-child input {
+        width: 30px;
+        padding-left: 2px;
+    }
+
+    #countdown td input {
+        width: 20px;
+        font-weight: bold;
+    }
+
+  </style>
+  
+</head>
+<body>
+  <!-- language selector -->
+  <div class="language-selector">
+    <a href="index_fr.html" hreflang="fr">Français</a>
+  </div>
+
+  <!-- header -->
+  <div class="container-xl web-header">
+    <div class="row align-items-center custom-row-width">
+      <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+        <div class="logo">
+          <img src="images/logo.png" alt="Sweet Symphony">
+        </div> 
+      </div>
+      <div class="d-none d-md-block col-sm-6 col-md-8 col-lg-7 nav">
+        <ul class="menu">
+          <li><a href="index_en.html">HOME</a></li>
+          <li><a href="services_en.html">SERVICES</a></li>
+          <li><a href="gallery.html">GALLERY</a></li>
+          <li><a href="about.html">ABOUT US</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+      <div class="d-md-none col-xs-12 col-sm-6 col-md-8 col-lg-7">
+        <div class="dropdown">
+          <button class="dropbtn">☰ MENU</button>
+          <div class="dropdown-content">
+            <a href="index_en.html">HOME</a>
+            <a href="services_en.html">SERVICES</a>
+            <a href="gallery.html">GALLERY</a>
+            <a href="about.html">ABOUT US</a>
+            <a href="contact.html">CONTACT</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-2 col-lg-3 search-col">
+        <div class="search-bar">
+          <img src="images/magnifier.png" alt="Search"> 
+          <input id="searchInput" type="text" placeholder="Search...">
+        </div> 
+      </div>
+    </div>
+  </div> 
+
+  <!-- main -->
+  <div class="container text-center">
+    <div class="row align-items-start">
+      <div class="col">
+        <form id="personalInfo" method="post" action="#">
+        <table>
+            <tr>
+              <th colspan="3">Personal Information
+                <input type="button" id="editBtn" data-bs-toggle="modal" data-bs-target="#modalEditInfo" onclick="editInfo();" value="Edit">
+              </th>
+            </tr>
+            <tr>
+                <td><label for="fullName">Name</label></td>
+                <td colspan="2"><input type="text" id="fullName" name="fullName" value="" size="35" disabled></td>
+            </tr>
+            <tr>
+                <td><label for="phoneNumber">Phone Number</label></td>
+                <td colspan="2"><input type="tel" id="phoneNumber" name="phoneNumber" value="" size="35" disabled></td>
+            </tr>
+            <tr>
+                <td><label for="emailAddress">Email Address</label></td>
+                <td colspan="2"><input type="email" id="emailAddress" name="emailAddress" value="" size="35" disabled></td>
+            </tr>
+            <tr>
+                <td rowspan="4"><label>Address</label></td>
+                <td style="font-weight: bold; text-align: left;"><label for="street">Street</label></td>
+                <td><input type="text" id="street" name="street" value="" size="25" disabled></td>
+            </tr>
+            <tr>
+                <td><label for="city">City</label></td>
+                <td><input type="text" id="city" name="city" value="" size="25" disabled></td>
+            </tr>
+            <tr>
+                <td><label for="province">Province</label></td>
+                <td><input type="text" id="province" name="province" value="" size="25" disabled></td>
+            </tr>
+            <tr>
+                <td><label for="postalCode">Postal Code</label></td>
+                <td><input type="text" id="postalCode" name="postalCode" value="" size="25" disabled></td>
+            </tr>
+        </table>
+      </form>
+      </div> 
+      <div class="col" id="wedding">
+        <table>
+            <tr><th colspan="2">Wedding Details<input type="button" id="weddingEditBtn" value="Edit" onclick="alertMsg();"></th></tr> 
+            <tr>
+                <td>Wedding Date</td>
+                <td id="weddingDate">&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Services Chosen</td>
+                <td id="servicesChosen">&nbsp;</td>
+            </tr>
+        </table>
+        <table id="countdown">
+            <tr><th colspan="8">Countdown</th></tr>
+            <tr>
+                <td><input id="days" size="1" value="" disabled></td>
+                <td>Days</td>
+                <td><input id="hours" size="1" value="" disabled></td>
+                <td>Hours</td>
+                <td><input id="minutes" size="1" value="" disabled></td>
+                <td>Minutes</td>
+                <td><input id="seconds" size="1" value="" disabled></td>
+                <td>Seconds</td>
+            </tr>
+        </table>
+      </div>
+      <div class="col" id="historyDiv">
+        <table id="history">
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal to edit personal information -->
+  <div class="modal fade" tabindex="-1" id="modalEditInfo" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content rounded-4 shadow">
+        <div class="modal-header p-5 pb-4 border-bottom-0">
+          <h1 class="fw-bold mb-0 fs-2">Edit Personal Information</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+  
+        <div class="modal-body p-5 pt-0">
+          <form class="row g-3 needs-validation" novalidate>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control rounded-3" id="fullNameEdit" value="" required>
+              <label for="fullNameEdit">Full Name</label>
+              <div class="invalid-feedback">
+                Please provide a valid full name.
+              </div>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="tel" class="form-control rounded-3" id="phoneNumberEdit" value="" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+              <label for="phoneNumberEdit">Phone Number</label>
+              <div class="invalid-feedback">
+                Please provide a valid phone number.
+              </div>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control rounded-3" id="emailAddressEdit" value="" required>
+              <label for="emailAddressEdit">Email Address</label>
+              <div class="invalid-feedback">
+                Please provide a valid email address.
+              </div>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control rounded-3" id="streetEdit" value="" required>
+              <label for="streetEdit">Street</label>
+              <div class="invalid-feedback">
+                Please provide a valid street.
+              </div>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control rounded-3" id="cityEdit" value="" required>
+              <label for="cityEdit">City</label>
+              <div class="invalid-feedback">
+                Please provide a valid city.
+              </div>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control rounded-3" id="provinceEdit" value="" required>
+              <label for="provinceEdit">Province</label>
+              <div class="invalid-feedback">
+                Please provide a valid province.
+              </div>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control rounded-3" id="postalCodeEdit" value="" required pattern="[ABCEGHJKLMNPRSTVXYabceghjklmnprstvxy]{1}\d{1}[A-Za-z]{1}[ ]{0,1}\d{1}[A-Za-z]{1}\d{1}">
+              <label for="postalCodeEdit">Postal Code</label>
+              <div class="invalid-feedback">
+                Please provide a valid postal code.
+              </div>
+            </div>
+            <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit" onclick="validateClientInfo()">Save</button>
+            <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="button" data-bs-dismiss="modal">Cancel</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="contact-info">
+      <div class="column">
+        <p><strong>Address:</strong></p>
+        <p>123 Main St.</p>
+        <p>Montreal, QC</p>
+        <p>Y7K9L3</p>
+      </div>
+      <div class="column">
+        <p><strong>Phone:</strong></p>
+        <p>123-456-78890</p>
+      </div>
+      <div class="column">
+        <p><strong>Opening Hours:</strong></p>
+        <p>Mon-Thur</p>
+        <p>10AM-5PM</p>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; Copyright 2024, Sweet Symphony</p>
+    </div>
+    <div class="social-media">
+      <a href="mailto:info@sweetsymphony.com" target="_blank">
+        <img src="images/E-mail.png" alt="email">
+      </a>
+      <a href="http://facebook.com/" target="_blank">
+        <img src="images/facebook.png" alt="facebook">
+      </a>
+    <a href="http://twitter.com/" target="_blank">
+      <img src="images/twitter.png" alt="twitter">
+    </a>
+    <a href="http://instagram.com/" target="_blank">
+      <img src="images/Instagram.png" alt="instagram">
+    </a>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<!-- 
+name:
+Current Date:
+File name: Home page
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sweet Symphony Home Page</title>
+  <link rel="stylesheet" href="css/main.css" >
+  <link rel="stylesheet" href="css/check_out.css" >
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="scripts/check_out.js" defer></script>
+  <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+  <script defer src="scripts/permission.js"></script>
+  <script defer src="scripts/banner.js"></script>
+   <!-- Favicon -->
+   <link rel="shortcut icon" href="images/favicon_io/favicon.ico">
+   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
+   <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="images/favicon_io/apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="192x192" href="images/favicon_io/android-chrome-192x192.png">
+   <link rel="icon" sizes="512x512" href="images/favicon_io/android-chrome-512x512.png">
+</head>
+
+<body>
+  <!-- language selector -->
+  <div class="language-selector">
+    <a href="index_fr.html" hreflang="fr">Français</a>
+  </div>
+
+  <!-- header -->
+  <div class="container-xl web-header">
+    <div class="row align-items-center custom-row-width">
+      <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+        <div class="logo">
+          <img src="images/logo.png" alt="Sweet Symphony">
+        </div> 
+      </div>
+      <div class="d-none d-md-block col-sm-6 col-md-8 col-lg-7 nav">
+        <ul class="menu">
+          <li><a href="index_en.html">HOME</a></li>
+          <li><a href="services_en.html">SERVICES</a></li>
+          <li><a href="gallery.html">GALLERY</a></li>
+          <li><a href="about.html">ABOUT US</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+      <div class="d-md-none col-xs-12 col-sm-6 col-md-8 col-lg-7">
+        <div class="dropdown">
+          <button class="dropbtn">☰ MENU</button>
+          <div class="dropdown-content">
+            <a href="index_en.html">HOME</a>
+            <a href="services_en.html">SERVICES</a>
+            <a href="gallery.html">GALLERY</a>
+            <a href="about.html">ABOUT US</a>
+            <a href="contact.html">CONTACT</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-2 col-lg-3 search-col">
+        <div class="search-bar">
+          <img src="images/magnifier.png" alt="Search"> 
+          <input id="searchInput" type="text" placeholder="Search...">
+        </div> 
+      </div>
+    </div>
+  </div>
+
+  <!-- main content -->
+
+<div id="container" class="directory">
+  
+  <div class="row" >
+
+    <div class="col">
+
+      <dialog  id="myDialog" open >
+    
+        <fieldset style="text-align: right; ">
+
+          <button id="closeDialog" onclick = "dialog.close();"> X</button>
+
+        </fieldset>
+     
+        <p id="datep">
+            <input  id="txtDateNow" name="txtDateNow" size="11" value="mm/dd/yyyy" readonly="readonly">
+        </p>
+
+        <h2 style="padding-left: 5%;"><strong>Invoice</strong></h2>
+        <p id="review">&nbsp;&nbsp;&nbsp;&nbsp;Please review the details below before submitting your payment</p>
+        <h3 style="text-align: center;">Enter Your Billing Information</h3>
+
+    
+        <form name="form3" id="form3" method="dialog" style="padding: 3%;"
+          onreset="location.reload();" onsubmit="return validateForm(); ">
+
+
+          <label for="name">Name<span><sup>*</sup></span> : </label>
+          <input type="text" id="name" 
+            size="25" maxlength="30" required="required" placeholder=" Your Name"  autofocus onchange = "fillInfo('name')">
+          <br><br>
+
+          <label for="email-input">Email<span><sup>*</sup></span> : </label>
+          <input type="email" id="email-input" 
+            size="25" maxlength="30" required="required" placeholder=" youremail@Website"  onchange="fillInfo('email')">
+          <br><br>
+    
+          <label for="phone">Phone : </label>
+          <input type="tel" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            size="20" maxlength="20" required="required" placeholder=" 123-456-7890"  onchange="fillInfo('phone')">
+          <br><br>
+
+          <label for="address">Address : </label>
+          <input type="text" id="address" 
+            size="30" maxlength="30" required="required" placeholder=" Ex. 123, Abc Street"   onchange = "fillInfo('address')">
+          <br><br>
+
+          <label>State : </label>
+      
+          <select id="state" onchange="fillInfo('state')">
+            <option value="Alberta">Alberta</option>
+            <option value="British Columbia">British Columbia</option>
+            <option value="Manitoba">Manitoba</option>
+            <option value="New Brunswick">New Brunswick</option>
+            <option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
+            <option value="Nova Scotia">Nova Scotia</option>
+            <option value="Ontario">Ontario</option>
+            <option value="Prince Edward Island">Prince Edward Island</option>
+            <option value="Quebec">Quebec</option>
+            <option value="Saskatchewan">Saskatchewan</option>
+            <option value="Northwest Territories">Northwest Territories</option>
+            <option value="Nunavut">Nunavut</option>
+            <option value="Yukon">Yukon</option>
+          </select>
+          <br><br>
+
+          <label for="city">City : </label>
+          <input type="text" id="city" 
+            size="30" maxlength="15" required="required" placeholder=" Montreal"  onchange="fillInfo('city')">
+          <br><br>
+
+          <label for="zip">Zip : </label>
+          <input type="text" id="zip" placeholder=" A9A-9A9" size="8" maxlength="8" onchange="fillInfo('zip')" 
+                pattern="[A-Za-z]{1}[0-9]{1}[A-Za-z]{1} [0-9]{1}[A-Za-z]{1}[0-9]{1}"> 
+      
+          <hr>
+
+          <h3 style="text-align: center;">Enter Your Payment Details</h3>
+      
+          <table>
+            <tr>
+              <td>
+                <label for="amount">Amount : </label>
+                <input type="number" id="amount" min="0" max="1000000" placeholder="$ 0.00"
+                  required="required" onchange="fillInfo('amount')" readonly="true">
+                    &nbsp;CAD
+                    <br><br>
+          
+                <label for="points">Your Points : </label>
+                <input type="number" id="points" placeholder="0" onchange="fillInfo('points'); " min="0" max="1000000"> 
+                <br><br>
+              </td>
+
+              <td>
+              </td>
+
+              <td>
+                <figure id="level" style="text-align: left;"> 
+                </figure>
+              </td>
+            </tr>
+          </table>
+          
+          
+          <fieldset id="card">
+            <legend>Card Information</legend>
+            
+          <label for="cardNumber">Card number : </label>
+          <input type="text" id="cardNumber" 
+            size="19" maxlength="19" required="required" placeholder=" 1234 5678 9012 3456" onchange="fillInfo('cardNumber')" 
+            pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}">
+          <br><br>
+
+          <label for="nameOnCard">Name on card : </label>
+          <input type="text" id="nameOnCard" 
+            size="19" maxlength="19" required="required" placeholder=" Ex. JOHN SMITH" onchange="fillInfo('nameOnCard')">
+
+          <figure style="text-align: left;"> 
+            &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+            <img src="images/check_out/visa-mastercard-maestro-american-express.png" alt="visa-mastercard-maestro-american-express" width="170" style=" text-align: right;">
+          </figure>
+      
+          <label for="cvc">CVC/CVV : </label><br>
+          <input type="text" id="cvc" size="3" maxlength="3" required="required" placeholder=" 000"  onchange="fillInfo('cvc')"
+                pattern="[0-9]{3}">
+          <br><br>
+
+          <label for="expiryM">Expiry : </label>
+          <br>
+          <input type="number" id="expiryM"  required="required" placeholder=" MM" min="01" max="12" onchange="fillInfo('expiryM')">
+      
+          <input type="number" id="expiryY"  required="required" placeholder=" YY" min="24" max="40" onchange="fillInfo('expiryY')">
+          <br><br>
+          </fieldset>
+          
+          <fieldset style="text-align: center;">
+        
+            <p id="formbuttons">
+              <input type="submit" name="btnSubmit" id="btnSubmit" value="Make Payment">
+              <input type="reset" name="btnCancel" id="btnCancel" value="Cancel" >
+            </p>
+        
+          </fieldset>
+      
+        </form>
+
+      </dialog>
+
+    </div><!--col-->
+    
+    <div  class="col">
+      <br>
+      
+      <fieldset style="text-align: center;">
+        
+        <p >
+        <button id="showDialog" onclick = "dialog.show();">
+                    Payment Window
+        </button>
+        </p>
+    
+      </fieldset>
+
+      <br>
+      
+      <div id="third"> 
+          <h1>Invoice</h1>
+        <div>
+        
+         <table id="invoice">
+          <thead>
+            <tr>
+              <td colspan="2">
+              <h4>Billing Address Information :</h4>
+              </td>
+            </tr>
+          </thead>
+          
+          <tr>  
+            <th>
+              Date : 
+            </th>
+
+            <td id="second">
+            </td>
+          </tr>
+
+          <tr>
+            <th>
+              Name :
+            </th>
+            <td id="customer-name">
+            </td>
+          </tr>
+
+          <tr>
+            <th>
+              Email :
+            </th>
+            <td id="customer-email">
+            </td>
+          </tr>
+
+          <tr>
+            <th>
+              Phone Number :
+            </th>
+            <td id="customer-phone">
+            </td>
+          </tr>
+
+          <tr>
+            <th>
+              Address :
+            </th>
+            <td id="customer-address">
+            </td>
+          </tr>
+          
+          <tr>
+            <th>
+              State :
+            </th>
+            <td id="customer-state">
+            </td>
+          </tr>
+          
+          <tr>
+            <th>
+              City :
+            </th>
+            <td id="customer-city">
+            </td>
+          </tr>
+          
+          <tr>
+            <th>
+              Zip :
+            </th>
+            <td id="customer-zip">
+            </td>
+          </tr>
+         
+          <tr>
+            <td colspan="2">
+              <hr>
+              <h4>Payment Information :</h4>
+            </td>
+          </tr>
+
+          <tr>
+            <th > 
+              Amount :
+            </th>
+            <td id="customer-amount">
+            </td>
+          </tr>
+
+          <tr>
+            <th>
+              Points :
+            </th>
+            <td id="customer-points">
+            </td>
+          </tr>
+
+          
+          <tr>
+            <th>
+              New Points :
+            </th>
+            <td id="customer-newPoints">
+            </td>
+          </tr>
+          
+          <tr>
+            <th>
+              Points after payment :
+            </th>
+            <td id="customer-PointsAfterPayment">
+            </td>
+          </tr>
+          
+          <tr>
+            <th>
+              Discount :
+            </th>
+            <td id="customer-discount">
+            </td>
+          </tr>
+          
+          <tr>
+            <th>
+              Sub Total :
+            </th>
+            <td id="customer-subTotal">
+            </td>
+          </tr>
+          
+          <tr>
+            <th>
+              Tax :
+            </th>
+            <td id="customer-tax">
+            </td>
+          </tr>
+          
+          <tr>
+            <th>
+              Total :
+            </th>
+            <td id="customer-total">
+            </td>
+          </tr>
+          
+          <tr>
+            <th colspan="2">
+              <hr>
+            </th>
+
+            
+          </tr>
+
+          <tr>
+            <th >
+              Card Number :
+            </th>
+            <td id="customer-cardNumber">
+            </td>
+          </tr>
+
+          <tr>
+            <th>
+              Name On Card :
+            </th>
+            <td id="customer-nameOnCard">
+            </td>
+          </tr>
+
+          <tr>
+            <th>
+              CVC / CVV :
+            </th>
+            <td id="customer-cvc">
+            </td>
+          </tr>
+          
+          <tr>
+            <th>
+              Expiry Date :
+            </th>
+            <td id="customer-expiry">
+            </td>
+            
+          </tr>
+          
+         </table> 
+         <hr>
+
+         <div id="result" class="container">
+
+          <div class="row" id="PaymentPaid" > Your Payment has not been processed yet
+          </div>
+          
+          <div class="row" >
+              <button id="sendInvoice" onclick = "sendEmailInvoice();">
+                Send Email Invoice
+              </button>
+          </div>
+          
+          <div class="row" id="email-sent" >
+          </div>
+         </div>
+
+        </div>
+      </div><!--third-->
+    </div><!--col-->
+
+    <div class="col" > 
+     
+    </div><!--col-->
+
+  </div><!--row-->
+
+  <div class="row">
+    <div class="col">&nbsp;</div>
+    <div class="col">&nbsp;</div>
+  </div>
+
+</div><!-- container -->
+  
+<!-- footer -->
+  <footer class="footer">
+    <div class="contact-info">
+      <div class="column">
+        <p><strong>Address:</strong></p>
+        <p>123 Main St.</p>
+        <p>Montreal, QC</p>
+        <p>Y7K9L3</p>
+      </div>
+      <div class="column">
+        <p><strong>Phone:</strong></p>
+        <p>123-456-78890</p>
+      </div>
+      <div class="column">
+        <p><strong>Opening Hours:</strong></p>
+        <p>Mon-Thur</p>
+        <p>10AM-5PM</p>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; Copyright 2024, Sweet Symphony</p>
+    </div>
+    <div class="social-media">
+      <a href="mailto:info@sweetsymphony.com" target="_blank">
+        <img src="/images/E-mail.png" alt="email">
+      </a>
+      <a href="http://facebook.com/" target="_blank">
+        <img src="/images/facebook.png" alt="facebook">
+      </a>
+    <a href="http://twitter.com/" target="_blank">
+      <img src="images/twitter.png" alt="twitter">
+    </a>
+    </div>
+  </footer>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<!-- 
+name: ==Team 1== Maha Abbadi, Leah Teresa Yapp, Fei Li, Linlin Xie 
+Current Date: Feb 19 2024
+File name: Contact page
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sweet Symphony Contact Us</title>
+  <meta name="description" content="Contact Sweet Symphony Wedding Planning Company and make appointment">
+  <meta name = "keywords" content = "Wedding, Planner, Sweet, Symphony">
+  <link rel="stylesheet" href="css/main.css" >
+  <link rel="stylesheet" href="css/contact.css" >
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+  <script defer src="scripts/permission.js"></script>
+  <script src="scripts/contact_us.js" defer></script>
+  <script defer src="scripts/banner.js"></script>
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="images/favicon_io/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="images/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/favicon_io/android-chrome-192x192.png">
+  <link rel="icon" sizes="512x512" href="images/favicon_io/android-chrome-512x512.png">
+</head>
+
+<body>
+  <!-- language selector -->
+  <div class="language-selector">
+    <a href="contact_fr.html" hreflang="fr">Français</a>
+  </div>
+
+  <!-- header -->
+  <div class="container-xl web-header">
+    <div class="row align-items-center custom-row-width">
+      <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+        <div class="logo">
+          <img src="images/logo.png" alt="Sweet Symphony">
+        </div> 
+      </div>
+      <div class="d-none d-md-block col-sm-6 col-md-8 col-lg-7 nav">
+        <ul class="menu">
+          <li><a href="index_en.html">HOME</a></li>
+          <li><a href="services_en.html">SERVICES</a></li>
+          <li><a href="gallery.html">GALLERY</a></li>
+          <li><a href="about.html">ABOUT US</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+      <div class="d-md-none col-xs-12 col-sm-6 col-md-8 col-lg-7">
+        <div class="dropdown">
+          <button class="dropbtn">☰ MENU</button>
+          <div class="dropdown-content">
+            <a href="index_en.html">HOME</a>
+            <a href="services_en.html">SERVICES</a>
+            <a href="gallery.html">GALLERY</a>
+            <a href="about.html">ABOUT US</a>
+            <a href="contact.html">CONTACT</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-2 col-lg-3 search-col">
+        <div class="search-bar">
+          <img src="images/magnifier.png" alt="Search"> 
+          <input id="searchInput" type="text" placeholder="Search...">
+        </div> 
+      </div>
+    </div>
+  </div>
+
+  <!-- main content -->
+  <div class="contact-main">
+    <p>Thank you for your interest in Sweet Symphony. We can't wait to hear from you!</p>
+    <p>Phone: 123-456-7890 // Email: <a href="mailto:info@sweetsymphony.com" target="_blank">info@sweetsymphony.com</a> // Join us: <a href="https://www.instagram.com/sweetsymphony" target="_blank">Instagram</a> | <a href="https://www.pinterest.com/sweetsymphony" target="_blank">Pinterest</a> | <a href="https://www.facebook.com/sweetsymphony" target="_blank">Facebook</a></p>
+    <br>
+
+    <form id="appointment" class ="container-xl" action="appointment.html" method="post" autocomplete="on" autocapitalize="words">
+      <fieldset class="row align-items-center custom-row-width">
+        <legend>&hearts; Make un Appointment with Us &hearts;</legend>
+        <table id="clint-info" class="col-sm-12 col-md-6 col-lg-6">
+          <tr>
+            <td>
+              <label for="full-name">Full Name<span><sup>*</sup></span></label>
+            </td>
+            <td>
+              <input type="text" id="full-name" size="35" maxlength="30" autofocus="autofocus" required="required" placeholder="Isabella Thompson"> 
+            </td>
+          </tr>
+          <tr>
+            <td>
+                <label for="phone">Phone number<span><sup>*</sup></span></label>
+            </td>
+            <td>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                    required="required" placeholder="123-456-7890" size="35">
+            </td>
+          </tr>
+          <tr>
+            <td>
+                <label for="email-address">Email address<span><sup>*</sup></span></label>
+            </td>
+            <td>
+                <input type="email" id="email-address" size="35" maxlength="30" required="required"
+                    placeholder="me@email.com">
+            </td>
+          </tr>
+          <tr>
+            <td>
+                <label for="source">Where did you hear about us?</label>
+            </td>
+            <td>
+                <select id="source" style="width: 300px;">
+                    <option value="website">Website</option>
+                    <option value="google">Google</option>
+                    <option value="facebook">Facebook</option>
+                    <option value="twitter">Twitter</option>
+                    <option value="instagram">Instagram</option>
+                    <option value="word-of-mouth">Word of Mouth</option>
+                    <option value="other">Other</option>
+                </select>
+            </td>
+          </tr>
+        </table>
+
+        <table id="appointment-info" class="col-sm-12 col-md-6 col-lg-6">
+          <tr>
+            <td>
+                <label for="visit-date">Event date(if known)</label>
+            </td>
+            <td>
+                <input type="date" id="visit-date" style="width: 265px;">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="services">What type of service(s) are you interested in?</label>
+            </td>
+            <td>
+              <div id="serviceInput" style="border: 1px solid #f03c69">Choose an option</div>
+            </td>
+          </tr>
+          <tr>
+            <td>(Click on the service again to remove from the list)</td>
+            <td>
+              <select id="services" style="width: 265px;" size="5"> 
+                  <option value="wedding-planning">Wedding Planning</option>
+                  <option value="make-up">Make-Up Artist</option>
+                  <option value="hairstylist">Hairstylist</option>
+                  <option value="photographer">Photographer</option>
+                  <option value="videographer">Videographer</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td >
+                <label for="more-info">Tell us more about your wedding!<span><sup>*</sup></span></label>
+            </td>
+              <td>
+                <textarea id="more-info" rows="4" cols="30" placeholder="How far are you in the planning process. What vendors have you selected? What do you need help with, etc." required="required"></textarea>
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+    </form>
+    <div>
+      <input form="appointment" id="send" type="submit" value="Send" onclick="window.location.href = 'appointment.html'">
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="contact-info">
+      <div class="column">
+        <p><strong>Address:</strong></p>
+        <p>123 Main St.</p>
+        <p>Montreal, QC</p>
+        <p>Y7K9L3</p>
+      </div>
+      <div class="column">
+        <p><strong>Phone:</strong></p>
+        <p>123-456-78890</p>
+      </div>
+      <div class="column">
+        <p><strong>Opening Hours:</strong></p>
+        <p>Mon-Thur</p>
+        <p>10AM-5PM</p>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; Copyright 2024, Sweet Symphony</p>
+    </div>
+    <div class="social-media">
+      <a href="mailto:info@sweetsymphony.com" target="_blank">
+        <img src="images/E-mail.png" alt="email">
+      </a>
+      <a href="http://facebook.com/" target="_blank">
+        <img src="images/facebook.png" alt="facebook">
+      </a>
+    <a href="http://twitter.com/" target="_blank">
+      <img src="images/twitter.png" alt="twitter">
+    </a>
+    <a href="http://instagram.com/" target="_blank">
+      <img src="images/Instagram.png" alt="instagram">
+    </a>
+    </div>
+  </footer>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
