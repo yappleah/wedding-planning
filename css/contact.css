@@ -1,0 +1,171 @@
+@charset "utf-8";
+
+fieldset {
+  border-radius: 20px;
+  margin: 10px;
+  padding: 5px;
+  font-weight: 300;
+}
+
+legend {
+  display: flex;
+  justify-content: center;
+  color: #e1a8b1;
+  font-family: "Dancing Script";
+  font-weight: bold;
+  height: 50px;
+  width:auto;
+}
+
+td {
+  padding: 5px;
+}
+
+select {
+  font-weight: 300;
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 1.5px solid #e1a8b1;
+}
+
+option {
+  font-weight: 300;
+}
+
+input[type="date"] {
+  font-weight: 300;
+}
+
+input {
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 1.5px solid #e1a8b1;
+}
+
+input:focus {
+  outline: none;
+}
+
+textarea {
+  border: 1.5px solid #e1a8b1;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+#send {
+  margin: 20px;
+  border-color: #f0d3d8;
+  border-radius: 10px; 
+  padding: 5px 10px; 
+  background-color: #f0d3d8; 
+  width: 150px;
+  color: #fff;
+}
+
+#send:hover {
+  background-color: #e1a8b1; 
+}
+
+#send a {
+  color: #fff;
+  text-decoration: none;
+  
+}
+
+
+#appointment {
+  display: flex;
+  justify-content: center;
+}
+
+
+#balloon {
+  animation: balloonAnimation 5s infinite;
+    
+}
+
+@keyframes balloonAnimation {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateX(10px) rotate(5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  
+}
+.contact-main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  margin: 0 30px;
+  font-weight: 300;
+}
+
+.contact-main a {
+  color:#e1a8b1;
+  text-decoration: none;
+}
+
+.contact-main a:hover {
+  color:#a8e1d8;
+}
+
+.contact-main .sent {
+  border-radius: 15px;
+  /* border: 2px dotted #e1a8b1; */
+  padding: 15px;
+  z-index: 999;
+  background-color:#fcf6f7;
+  box-shadow: 
+  10px 10px 20px -10px rgba(0, 0, 0, 0.5),
+  inset 10px 10px 10px rgba(255, 255, 255, 0.7),
+  -10px -10px 20px rgba(255, 255, 255, 0.7),
+  inset -1px 1px 5px rgba(0, 0, 0, 0.3)
+  ;
+}
+
+.contact-main img {
+  width: 20rem;
+  border: 0;
+}
+
+.shadow_img {
+  filter: drop-shadow(15px 15px 5px rgba(0, 0, 0, 0.5))opacity(80%);
+  border: 0;
+}
+
+
+::-webkit-input-placeholder { 
+  font-weight: 300;
+}
+
+.angled-135 {
+  background-color:rgba(252,246,247, 0);
+  animation: fadeIn 3s forwards;
+  background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 75%, transparent 75%, transparent);
+}
+
+@keyframes fadeIn {
+  from {
+      background-color: rgba(252,246,247, 0);
+  }
+  to {
+      background-color: rgba(252,246,247, 1);
+  }
+}
+
+.stripes {
+
+  background-size: 80px 80px; 
+
+  z-index: 0;
+}

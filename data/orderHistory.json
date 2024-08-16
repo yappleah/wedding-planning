@@ -1,0 +1,44 @@
+[
+    {
+        "userID": 1,
+        "orderNumber": 100,
+        "orderDate": "2024-03-11",
+        "orderAmount": 2000,
+        "pointsEarned": 10000
+    },
+    {
+        "userID": 1,
+        "orderNumber": 210,
+        "orderDate": "2024-04-11",
+        "orderAmount": 200,
+        "pointsEarned": 1000
+    },
+    {
+        "userID": 2,
+        "orderNumber": 300,
+        "orderDate": "2024-04-11",
+        "orderAmount": 10000,
+        "pointsEarned": 50000
+    },
+    {
+        "userID": 3,
+        "orderNumber": 313,
+        "orderDate": "2024-04-11",
+        "orderAmount": 10000,
+        "pointsEarned": 50000
+    },
+    {
+        "userID": 3,
+        "orderNumber": 314,
+        "orderDate": "2024-04-11",
+        "orderAmount": 5000,
+        "pointsEarned": 25000
+    },
+    {
+        "userID": 3,
+        "orderNumber": 315,
+        "orderDate": "2024-04-11",
+        "orderAmount": 5000,
+        "pointsEarned": 25000
+    }
+]

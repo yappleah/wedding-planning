@@ -1,0 +1,111 @@
+/* reset layout */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* define standard variables */
+/*
+        iPhone 5S is an example of a Breakpoint 1 with 320px
+        iPhone 6+ is an example of a Breakpoint 2 with 414px
+        iPad Mini is an example of a Breakpoint 3 with 703px
+        iPad Air is an example of a Breakpoint 4 with 768px
+*/
+.carousel .carousel-item {
+  background-size: cover;
+}
+.carousel .carousel-item:nth-child(1) {
+  background-image: url(../images/ss1.jpg);
+}
+.carousel .carousel-item:nth-child(2) {
+  background-image: url(../images/ss2.JPG);
+}
+.carousel .carousel-item:nth-child(3) {
+  background-image: url(../images/ss3.JPG);
+}
+@media (max-width: 575px) {
+  .carousel .carousel-item {
+    background-position: -250px;
+    height: 300px;
+  }
+}
+@media (min-width: 575px) {
+  .carousel .carousel-item {
+    background-position: -200px;
+    height: 330px;
+  }
+}
+@media (min-width: 768px) {
+  .carousel .carousel-item {
+    background-position: -100px;
+    height: 360px;
+  }
+}
+@media (min-width: 1200px) {
+  .carousel .carousel-item {
+    background-position: -50px;
+    height: 450px;
+  }
+}
+@media (min-width: 1400px) {
+  .carousel .carousel-item {
+    background-position: 0px;
+    height: 500px;
+  }
+}
+
+.welcome {
+  width: 70%;
+  text-align: center;
+  margin: 30px auto;
+}
+.welcome p:first-child {
+  color: #e1a8b1;
+}
+.welcome h1 {
+  color: #e1a8b1;
+  font-family: "Dancing Script";
+  font-weight: 700;
+}
+.welcome p:last-child {
+  font-family: "Dancing Script";
+}
+
+#adviceDiv h5{
+  font-family: "Dancing Script";
+}
+
+@media (max-width: 575px) {
+  .welcome p:first-child {
+    font-size: 1.4rem;
+  }
+  .welcome h1 {
+    margin-bottom: 12px;
+  }
+  .welcome p:last-child {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 575px) {
+  .welcome p:first-child {
+    font-size: 1.6rem;
+  }
+  .welcome h1 {
+    margin-bottom: 15px;
+  }
+  .welcome p:last-child {
+    font-size: 1.3rem;
+  }
+}
+@media (min-width: 768px) {
+  .welcome p:first-child {
+    font-size: 1.8rem;
+  }
+  .welcome h1 {
+    margin-bottom: 20px;
+  }
+  .welcome p:last-child {
+    font-size: 1.5rem;
+  }
+}/*# sourceMappingURL=index_en_fr.css.map */

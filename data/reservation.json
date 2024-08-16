@@ -1,0 +1,34 @@
+{
+    "rentals":[
+        {
+            "value": "Flower Bouquet Centerpiece-4.95",
+            "inner": "Flower Bouquet Centerpiece ($4.95)"
+        },
+        {
+            "value": "Wooden Lantern-5.95",
+            "inner": "Wooden Lantern ($5.95)"
+        },
+        {
+            "value": "Glass Bowl Centerpiece-9.95",
+            "inner": "Glass Bowl Centerpiece ($9.95)"
+        },
+        {
+            "value": "Golden Chair-19.95",
+            "inner": "Golden Chair ($19.95)"
+        },
+        {
+            "value": "Wedding Tents-99.95",
+            "inner": "Wedding Tents ($99.95)"
+        },
+        {
+            "value": "White Flower Centerpiece-7.95",
+            "inner": "White Flower Centerpiece ($7.95)"
+        },
+        {
+            "value": "Wooden Arch-79.95",
+            "inner": "Wooden Arch ($79.95)"
+        }
+        
+    ]
+ 
+  }

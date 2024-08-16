@@ -1,0 +1,111 @@
+@charset "utf-8";
+@import './reset';
+@import './variables';
+
+.direc {
+    margin-top: 50px;
+    padding-left: 160px;
+    
+    ul {
+        display: flex;
+        list-style-type: none;
+
+    li a {
+        text-decoration: none;
+        color:$accent-color;
+        padding: 0px 10px;
+        border-right: 1.5px solid $accent-color;
+    }
+
+    li:last-child a {
+        border-right: none;
+    }
+}
+
+}  
+
+.servies {
+
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 150px;
+    margin-bottom: 200px;
+    text-align: center;
+    .row {
+        div {
+            // height:250px;
+             margin-bottom: 50px;
+
+            a {
+                position: relative;
+                display: block;
+                height: 220px;
+                border-radius: 10px;
+                background-size: cover;
+                border: solid 3px $accent-color;
+                box-shadow:3px 3px 5px #727272;
+        
+                transition: all 0.5s;
+
+                h1 {
+                    position: absolute;
+                    top:33%;
+                    left:0px;
+                    width: 100%;
+                    height: 33%;
+                    background: rgba(0, 0, 0, 0.6);
+
+                    color:$accent-color;
+                    font-weight: bold;
+                    font-size: 32px;
+                    line-height: 70px;
+                    opacity: 0;
+                    transition: all 0.5s;
+                }
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+
+                &:hover h1 {
+                    opacity: 1;
+                }
+
+              }
+
+
+            &:nth-child(1) a {
+                background-image: url(../images/rental.jpg);
+                
+            }
+
+            &:nth-child(2) a {
+                background-image: url(../images/catering1.png);
+                
+            }
+
+            &:nth-child(3) a {
+                background-image: url(../images/planning.png);
+                
+            }
+
+
+           }
+        }
+        
+
+
+    @media (max-width:992px) {
+        .row div a h1 {
+            opacity: 1;
+            font-size: 24px;
+         }
+
+        .row div a:hover  {
+            transform: scale(1);
+        }
+    }
+
+    
+ }
+

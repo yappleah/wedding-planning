@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+.col img {
+    width: 15rem; 
+    height: 15rem;
+    box-shadow: 3px 4px 15px rgba(44, 44, 44, 0.5);
+    margin-bottom: 1rem;
+    border: 7px outset lightgray;
+    transition: all 5s ease;
+    transform: translate(10px, -10px);
+}
+
+.col img:hover {
+    transform: rotate(360deg);
+}
+
+.col p{
+    margin-right: 3rem;
+    margin-bottom: 1rem;
+    text-align: left;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+    display: inline-block;
+}
+
+.row {
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+.top {
+    border: 0.3rem double lightgrey; 
+    background: gray; 
+    border-radius: 40%; 
+    padding: 1% 2% 1% 2%;
+    float: left;
+    box-shadow: 2px 4px 15px gray;
+    transition: all 5s ease;
+    transform: translate(10px, -10px);
+    font-size: larger;
+    color:white;
+    text-decoration-line: none;
+}
+
+.top:hover {
+    color: rgb(212, 181, 205);
+    transform: rotateY(360deg);
+
+}
+
+@media only screen and (max-width: 414px) {
+    .col img {
+        width: 5rem;
+        height: 5rem;
+    }
+    .col h4 {
+        font-size: small;
+    }
+    
+    .col  {
+        font-size: x-small;
+    }
+    .top {
+        font-size: x-small;
+    }
+}
+
+@media only screen and (min-width: 415px) and (max-width: 767px) {
+    .col img {
+        width: 15rem;
+        height: 15rem;
+    }
+    
+    .col h4 {
+        font-size: medium;
+    }
+    
+    .col  {
+        font-size: small;
+    }
+    .top {
+        font-size: small;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .col img {
+        width: 20rem; 
+        height: 20rem;
+    }
+        
+    .col h4 {
+        font-size: large;
+    }
+    
+    .col  {
+        font-size: medium;
+    }
+    .top {
+        font-size: medium;
+    }
+}
+
+
+.btn-primary {
+    --bs-btn-bg: #e1a8b1 !important;
+    --bs-btn-border-color: #e1a8b1 !important;
+    --bs-btn-hover-bg: #da576b !important;
+    --bs-btn-hover-border-color: #da576b !important;
+    font-weight: 600;
+    width: 220px;
+    position: absolute;
+    top:250px;
+    left:70%;
+  }
+  
+  .btn-primary a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .btn-primary a i {
+    vertical-align: middle;
+    margin-top: -5px;
+  }

@@ -1,0 +1,44 @@
+
+[
+    {
+        "userID": 1,
+        "userName": "isabella123",
+        "fullName": "Isabella Thompson",
+        "phoneNumber": "123-456-7890",
+        "emailAddress": "me@email.com",
+        "street": "50 Red Street",
+        "city": "Montreal",
+        "province": "QC",
+        "postalCode": "P9K 0J7",
+        "isHavingWedding": true,
+        "totalPoint": 11000
+    },
+    {
+        "userID": 2,
+        "userName": "john123",
+        "fullName": "John Smith",
+        "phoneNumber": "555-555-5555",
+        "emailAddress": "johnsmith@gmail.com",
+        "street": "900 King Street",
+        "city": "Montreal",
+        "province": "QC",
+        "postalCode": "H2M 9L7",
+        "isHavingWedding": false,
+        "totalPoint": 50000
+    },
+    {
+        "userID": 3,
+        "userName": "mary123",
+        "fullName": "Mary Brown",
+        "phoneNumber": "777-777-7777",
+        "emailAddress": "mary@brown.com",
+        "street": "5480 Princess Street",
+        "city": "Montreal",
+        "province": "QC",
+        "postalCode": "Y7F 3D9",
+        "isHavingWedding": true,
+        "totalPoint": 100000
+    }
+]
+
+

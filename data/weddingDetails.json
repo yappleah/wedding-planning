@@ -1,0 +1,19 @@
+[
+    {
+        "userID": 1,
+        "weddingDate": "2025-03-05 17:00",
+        "servicesChosen": [
+            "Photography",
+            "Videography", 
+            "Wedding Planning", 
+            "Hairstylist"
+        ]
+    },
+    {
+        "userID": 3,
+        "weddingDate": "2024-12-25 09:00",
+        "servicesChosen": [
+            "Photography"
+        ]
+    }
+]

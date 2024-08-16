@@ -1,0 +1,312 @@
+
+
+.diabg {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: #0c0c0c;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.dia {
+    /* display: none; */
+    display: none;
+    position: relative;
+    position: absolute;
+    left: 50%;
+    bottom: 20%;
+    transform: translate(-50%, -50%);
+    opacity: 1 !important;
+    width: 350px;
+    height: 200px;
+    /* border: 2px solid #e1a8b1; */
+    border-radius: 10px;
+    text-align: center;
+    line-height: 200px;
+    
+    color:#e1a8b1;
+    background-color: #ffffff;
+    z-index: 2;
+    font-weight: 500;  
+    
+}
+.dia a,
+.dia span {
+    display: block;
+    color: #a7a4a4;
+    text-decoration: none;
+    line-height: 40px;
+
+}
+.dia .login{
+    margin-top: 70px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #e1a8b1;
+}
+.dia .login em{
+    font-size: 28px;
+    text-decoration: underline;
+}
+
+.dia .guest {
+    font-size: 18px;
+
+}
+
+
+.closeRe {
+    position: absolute;
+    left: 93%;
+    
+
+
+}
+
+.closeRe a {
+    text-decoration: none;
+    
+}
+
+/* .close:hover {
+    
+    background-color: #e1a8b1;
+    color: #fff;
+  } */
+
+
+
+
+
+
+.pform {
+    width: 65%;
+    margin: 60px auto 30px;
+    color: #666060;
+    font-weight: 600;
+    /* display: flex;
+    justify-content:space-evenly; */
+    
+}
+
+
+.pform fieldset {
+    border: 2.5px solid #e1a8b1 !important;
+    border-radius: 15px;
+    position: relative;
+    
+    width: 530px;
+    z-index: 0;
+    
+}
+
+
+.pform fieldset:first-child {
+    margin-right: 100px;
+}
+
+
+.pform legend {
+    padding: 0px 20px !important;
+    float:none;
+    width:auto;
+}
+
+
+
+
+.pform fieldset div {
+    /* display: flex; */
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-bottom: 25px;
+ 
+    
+} 
+
+
+.pform fieldset div div {
+    padding-right: 30px;
+}
+
+.pform fieldset div div:last-child {
+    display:flex;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+
+
+
+.pform fieldset div select,
+.pform fieldset div input{
+    border: 2px solid #e1a8b1;
+    border-radius: 5px;
+}
+
+.cinfo {
+    width: 278px;
+}
+
+
+
+.pform fieldset div .pqtn,
+.pform fieldset div .cpqtn{
+    width: 60px;
+}
+
+
+
+.add,
+.cadd {
+    width: 350px;
+    height: 28px;
+    background-color: #e1a8b1;
+    text-align: center;
+    line-height: 28px;
+    border:0;
+    border-radius: 10px;
+    color:white;
+    font-weight: 600;
+}
+
+.promptu,
+.promptd {
+
+    color: #e1a8b1;
+    font-size: 18px;
+    /* width: 250px;
+    visibility: hidden;
+    background-color: #e1a8b1;
+    color:#fff;
+    padding: 0 10px;
+    border-radius: 5px;
+    position: relative; */
+}
+
+
+  /* .promptd::after,
+  .promptu::after{
+    position: absolute;
+    content: "";
+    top: 30%;
+    left: -6px;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-right: 6px solid #e1a8b1;
+    border-bottom: 5px solid transparent;
+    
+  } */
+
+
+
+
+.iList {
+    width: 80%;
+    margin: 0px auto;
+    margin-top:50px;
+    /* margin-bottom: 20px; */
+    color: #666060;
+    font-weight: 600;
+    padding-left: 220px;
+    
+
+} 
+
+.empty {
+    /* width: 40%;
+    margin: 0px auto; */
+    text-align: center;
+    margin-top:50px;
+    margin-bottom: 110px;
+    color: #e1a8b1;
+    font-weight: 600;
+    
+
+} 
+
+
+.empty span {
+    display: inline-block;
+    line-height: 38px;
+    /* font-family: "Madimi One"; */
+    font-size: 30px;
+}
+
+.empty span i {
+    font-size: 38px;
+    vertical-align: bottom;
+    line-height: 38px;
+}
+
+
+.iList td {
+    padding-right: 50px;
+    text-align: center;
+    border-bottom: 1px solid #e1a8b1;
+    line-height: 40px;
+    
+}
+
+.iList td a {
+    text-decoration: none;
+    font-size: 22px;
+    color: #e1a8b1;
+    vertical-align: middle;
+}
+
+.iList h3{
+    padding-left: 380px;
+    margin-bottom: 25px;
+    /* font-family: "Dancing Script";
+    font-weight: 800px; */
+}
+
+
+.iList h3 + tr,
+.iList h3 + tr:hover{
+    background-color: #e1a8b1;
+    color:white;
+    
+}
+
+
+.iList tr:hover {
+    background-color: #fceff1;
+}
+
+.iList div {
+    width: 80%;
+    margin: 15px auto 50px;
+    padding-left: 300px;  
+}
+
+.iList .esto {
+    padding-left: 595px;
+    font-size: 18px;
+    /* font-weight: 700; */
+}
+
+
+.iList div input {
+    width: 180px;
+    height: 50px;
+    font-size: 20px;
+    
+    background-color: #e1a8b1;
+    line-height: 28px;
+    border:0;
+    border-radius: 10px;
+    color:white;
+    font-weight: 600;
+    
+}
+
+
+

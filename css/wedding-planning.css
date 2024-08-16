@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+#wedding-planning {
+    padding: 20px 40px;
+    position: relative;
+}
+        
+#wedding-planning div h4 {
+    color: #E1A8B1;
+}
+        
+p.meet-our-team {
+     font-family: "Dancing Script", cursive;
+     font-size: 1.5rem;
+    font-style: normal;
+}
+
+p.meet-our-team img {
+    width: 20px;
+    height: 20px;
+    float: left;
+}
+
+p.meet-our-team img.transform {
+    float: right;
+    transform: scaleY(-1) scaleX(-1)
+}
+
+.team-member {
+    border-radius: 50%;
+    border: 1px solid darkgray;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.catering-img {
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+@media only screen and (max-width: 414px) {
+    .team-member {
+        width: 100%;
+        height: 100%;
+    }
+
+    .catering-img {
+        width: 80%;
+        height: 100%;
+        border-radius: 50%;
+    }
+}
+
+@media only screen and (min-width: 415px) and (max-width: 767px) {
+    .team-member {
+        width: 150px;
+        height: 150px;
+    }
+
+    .catering-img {
+        width: 300px;
+        height: 200px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .team-member {
+         width: 100%;
+        height: auto;
+    }
+
+    .catering-img {
+        width: 500px;
+        height: 300px;
+    }
+}

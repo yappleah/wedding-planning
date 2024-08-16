@@ -1,0 +1,131 @@
+@charset "utf-8";
+@import './reset';
+@import './variables';
+
+
+.carousel {
+
+    .carousel-item {
+        background-size: cover;
+
+        &:nth-child(1) {
+            background-image: url(../images/ss1.jpg);
+        }
+            
+        &:nth-child(2) {
+            background-image: url(../images/ss2.JPG);
+        }
+        &:nth-child(3) {
+            background-image: url(../images/ss3.JPG);
+        }
+    }
+
+    @media (max-width:$mobile) {
+        .carousel-item {
+            background-position: -250px;
+            height:300px;
+        }
+    }
+
+    @media (min-width:$mobile) {
+        .carousel-item {
+            background-position: -200px;
+            height:330px;
+        }
+    }
+
+    @media (min-width:$tablet) {
+        .carousel-item {
+            background-position: -100px;
+            height:360px;
+        }
+    }
+
+
+    @media (min-width:1200px) {
+        .carousel-item {
+            background-position: -50px;
+            height:450px;
+        }
+    }
+
+    @media (min-width:1400px) {
+        .carousel-item {
+            background-position: 0px;
+            height:500px;
+        }
+    }
+    
+}
+    
+
+.welcome {
+    width: 70%;
+    text-align: center;
+    margin:30px auto;
+
+    p:first-child {
+        color: $accent-color;
+    }
+
+    h1 {
+        color: $accent-color;
+        font-family: "Dancing Script";
+        font-weight: map-get($font-weights, "bold");
+    }
+
+    p:last-child {
+        font-family: "Dancing Script";
+    }
+
+    @media (max-width:$mobile) {
+
+        p:first-child {
+            font-size: 1.4rem;
+        }
+    
+        h1 {
+            margin-bottom:12px;
+        }
+    
+        p:last-child {
+            font-size: 1.2rem;
+        }
+        
+    }
+
+    @media (min-width:$mobile) {
+
+        p:first-child {
+            font-size: 1.6rem;
+        }
+    
+        h1 {
+            margin-bottom:15px;
+        }
+    
+        p:last-child {
+            font-size: 1.3rem;
+        }
+        
+    }
+
+    @media (min-width:$tablet) {
+
+        p:first-child {
+            font-size: 1.8rem;
+        }
+    
+        h1 {
+            margin-bottom:20px;
+        }
+    
+        p:last-child {
+            font-size: 1.5rem;
+        }
+        
+    }
+}
+
+
+
